@@ -1,5 +1,6 @@
 import os
 import sys
+import django_heroku
 
 import dj_database_url
 
@@ -199,3 +200,5 @@ if DEBUG:
     DEBUG_TOOLBAR_CONFIG = {
         "SHOW_TOOLBAR_CALLBACK": lambda request: True
     }
+
+django_heroku.settings(locals())
