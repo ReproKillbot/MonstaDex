@@ -7,7 +7,8 @@
         </div>
       </div>
     </div>
-    <table class="table text-center">
+   <div>
+    <table data class="container text-center tablesorter" id="AttacksList">
    <thead>
      <tr>
        <th scope="col">Id</th>
@@ -64,6 +65,11 @@
          self.update()
      })
    }
+
+    $(function(){
+         $("#AttacksList").tablesorter({ sortList: [[0,0], [1,0]] });
+     });
+
   </script>
   <style>
   h1 {
